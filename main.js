@@ -19,16 +19,15 @@ function display(){
 
 function adduser(e){
     e.preventDefault();
-    let price = document.getElementById("specificSizeInputPrice").value
-    let des = document.getElementById("specificSizeInputGroupDescription").value
-    let opt = document.getElementById("specificSizeSelect");
-    let optVal = opt.options[opt.selectedIndex].text;
+    let price = document.getElementById("specificSizeInputPrice").value;
+    let des = document.getElementById("specificSizeInputGroupDescription").value;
+    let opt = document.getElementById("specificSizeSelect").value;
     let userobj = {
         price: price,
         des: des,
-        opt: optVal
+        opt: opt
       };
-      if(price=="" || des=="" || opt==="Choose..."){
+      if(price=="" || des=="" || opt===""){
         alert("enter proper values")
       }else{
       details.push(userobj);
